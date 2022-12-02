@@ -7,6 +7,6 @@ fun String.readLines() : List<String> {
 }
 
 fun String.readLinesAsInt() : List<Int> {
-    return this.split("\n")
+    return this.readLines()
         .map(String::toInt)
 }

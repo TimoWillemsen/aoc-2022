@@ -12,7 +12,7 @@ fun main() {
     )
     loadFile("day02.txt")
         .readLines()
-        .map { resultCache.getValue(it) }
+        .map(resultCache::getValue)
         .also { println(it.sumOf { r -> r.first }) }
         .also { println(it.sumOf { r -> r.second }) }
 }
