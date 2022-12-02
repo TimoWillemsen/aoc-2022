@@ -11,7 +11,7 @@ fun main() {
         "C Z" to (6 to 7)
     )
     loadFile("day02.txt")
-        .split("\n")
+        .readLines()
         .map { resultCache.getValue(it) }
         .also { println(it.sumOf { r -> r.first }) }
         .also { println(it.sumOf { r -> r.second }) }
