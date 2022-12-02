@@ -10,13 +10,9 @@ fun main() {
         "A Z" to (3 to 8),
         "C Z" to (6 to 7)
     )
-    val result = loadFile("day02.txt")
+    loadFile("day02.txt")
         .split("\n")
         .map { resultCache.getValue(it) }
-
-    result.sumOf { it.first }
-        .also(::println)
-
-    result.sumOf { it.second }
-        .also(::println)
+        .also { println(it.sumOf { r -> r.first }) }
+        .also { println(it.sumOf { r -> r.second }) }
 }
