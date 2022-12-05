@@ -10,3 +10,7 @@ fun String.readLinesAsInt() : List<Int> {
     return this.readLines()
         .map(String::toInt)
 }
+
+infix fun String.intersect(other: String) : String {
+    return this.toSet().intersect(other.toSet()).joinToString()
+}

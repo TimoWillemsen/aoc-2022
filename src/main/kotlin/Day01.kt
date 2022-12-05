@@ -4,6 +4,6 @@ fun main() {
         .map(String::readLinesAsInt)
         .map(List<Int>::sum)
         .sortedDescending()
-        .also{ println("First answer ${it[0]}")}
-        .also{ println("Second answer answer ${it[0] + it[1] + it[2]}")}
+        .also{ println("First answer ${it.first()}")}
+        .also{ println("Second answer answer ${it.take(3).sum()}")}
 }
